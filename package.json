@@ -4,7 +4,9 @@
   "description": "Node Template for IntelliJ",
   "main": "\u001b[A\u001b[B",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha **/*.test.js",
+    "start": "node app.js",
+    "test-watch": "nodemon --exec \"npm test\""
   },
   "repository": {
     "type": "git",
@@ -16,12 +18,36 @@
     "url": "https://github.com/bongbatman/node-tests/issues"
   },
   "homepage": "https://github.com/bongbatman/node-tests#readme",
-  "dependencies": {},
+  "dependencies": {
+    "array-flatten": "^2.1.1",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "cookie-signature": "^1.1.0",
+    "debug": "^3.1.0",
+    "express": "^4.16.3",
+    "hbs": "^4.0.1",
+    "http-errors": "^1.7.0",
+    "iconv-lite": "^0.4.23",
+    "ipaddr.js": "^1.8.1",
+    "mime": "^2.3.1",
+    "mime-db": "^1.36.0",
+    "ms": "^2.1.1",
+    "path-to-regexp": "^2.3.0",
+    "qs": "^6.5.2",
+    "raw-body": "^2.3.3",
+    "request": "^2.88.0",
+    "safe-buffer": "^5.1.2",
+    "statuses": "^1.5.0",
+    "yargs": "^12.0.1"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "grunt": "^1.0.3",
     "grunt-babel": "^7.0.0",
-    "load-grunt-tasks": "^4.0.0"
+    "jest": "^23.5.0",
+    "load-grunt-tasks": "^4.0.0",
+    "mocha": "^5.2.0",
+    "supertest": "^3.1.0"
   }
 }
